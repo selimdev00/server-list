@@ -3,7 +3,8 @@ import { useServerList } from "@/composables/useServerList.ts";
 import FormInput from "@/components/Form/FormInput.vue";
 import FormSelect from "@/components/Form/FormSelect.vue";
 
-const { selectedServer, saveSelectedServer } = useServerList();
+const { selectedServer, saveSelectedServer, deleteSelectedServer } =
+  useServerList();
 </script>
 
 <template>
@@ -20,10 +21,9 @@ const { selectedServer, saveSelectedServer } = useServerList();
 
       <form
         v-else
-        class="flex flex-col justify-between h-full"
+        class="flex flex-col justify-between h-full gap-4"
         @submit.prevent="saveSelectedServer"
       >
-        {{ selectedServer }}
         <div class="flex flex-col gap-3">
           <FormInput
             id="customer_id"
@@ -55,12 +55,14 @@ const { selectedServer, saveSelectedServer } = useServerList();
 
           <button
             class="border-0 bg-red-500 px-2 py-1 rounded text-white w-full"
+            @click="deleteSelectedServer"
           >
             Delete
           </button>
 
           <button
             class="border-0 bg-gray-500 px-2 py-1 rounded text-white w-full"
+            @click="selectedServer = null"
           >
             Cancel
           </button>

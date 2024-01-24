@@ -49,11 +49,28 @@ export function useServerList() {
     setSelectedServer(null);
   }
 
+  function deleteSelectedServer() {
+    if (!selectedServer.value) {
+      return;
+    }
+
+    const index = servers.value.findIndex(
+      (server) => server.id === selectedServer.value?.id,
+    );
+
+    if (index > -1) {
+      servers.value.splice(index, 1);
+    }
+
+    setSelectedServer(null);
+  }
+
   return {
     servers,
     selectedServer,
     setSelectedServer,
     generateRandomServers,
     saveSelectedServer,
+    deleteSelectedServer,
   };
 }

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useServerList } from "@/composables/useServerList.ts";
 
-const { servers, setSelectedServer, selectedServer } = useServerList();
+const { servers, setSelectedServer, selectedServer, generateRandomServers } =
+  useServerList();
 </script>
 
 <template>
@@ -9,15 +10,24 @@ const { servers, setSelectedServer, selectedServer } = useServerList();
     <div class="flex items-center justify-between">
       <h1 class="font-semibold text-xl">Server list:</h1>
 
-      <button
-        class="border border-sky-300 px-2 py-1 rounded text-xs"
-        @click="setSelectedServer(null)"
-      >
-        Clear
-      </button>
+      <div class="flex items-center gap-2">
+        <button
+          class="border border-sky-300 px-2 py-1 rounded text-xs"
+          @click="setSelectedServer(null)"
+        >
+          Deselect
+        </button>
+
+        <button
+          class="border border-sky-300 px-2 py-1 rounded text-xs"
+          @click="servers = []"
+        >
+          Clear
+        </button>
+      </div>
     </div>
 
-    <ul class="flex flex-col">
+    <ul v-if="servers.length" class="flex flex-col">
       <li
         v-for="server in servers"
         :key="server.customer_id"
@@ -40,5 +50,19 @@ const { servers, setSelectedServer, selectedServer } = useServerList();
         >
       </li>
     </ul>
+
+    <div
+      v-else
+      class="min-h-[200px] flex flex-col gap-4 items-center justify-center border border-gray-300 rounded"
+    >
+      <p class="text-gray-500 text-center text-sm">No servers</p>
+
+      <button
+        class="border border-sky-300 px-2 py-1 rounded text-xs"
+        @click="generateRandomServers(5)"
+      >
+        Generate random servers
+      </button>
+    </div>
   </div>
 </template>
