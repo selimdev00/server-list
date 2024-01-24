@@ -1,18 +1,37 @@
-# Vue 3 + TypeScript + Vite
+### ☕✨ Server List
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**Overview:**
+The Server List test project is designed to showcase and test various functionalities related to Vue 3, composables, Typescript, ui & ux. It serves as a demonstration of key features and allows for testing and experimentation in a controlled environment.
 
-## Recommended IDE Setup
+**Key Features:**
+- [Server list]: Generating, editing, deleting and cancelling.
+- [Composable usage]: Composables as global state.
+- [Typescript]: Functions and variables are basically types.
+- [Configuration]: Typescript & vite & tailwind confiugration for vue 3
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+**Purpose:**
+- Provide a hands-on experience for users to interact with and evaluate the project.
+- Identify and address potential issues or bugs.
+- Test the performance and responsiveness of server list and server editor.
+- Gather feedback and suggestions for improvement.
 
-## Type Support For `.vue` Imports in TS
+**How to Use:**
+1. [Step 1]: `npm i && npm run dev` or `npm i && npm run build && npm run preview`.
+2. [Step 2]: Click on server item in server list to edit in server editor on the right pan.
+3. [Step 3]: You can add bugs and issues in issues section of this github repo.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+**Contributing:**
+- Contributions and feedback from users are welcome.
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+**Contact:**
+For any inquiries or assistance, please contact at [selimdev00@gmail.com].
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+**Disclaimer:**
+This is a test project, and any data or changes made within the project may be periodically reset. Use this environment for testing purposes only.
+
+**Acknowledgments:**
+We appreciate your interest in exploring Server List and welcome your feedback to enhance the project further.
+
+--- 
+
+Feel free to customize the template based on the specific details and purpose of your test project.
