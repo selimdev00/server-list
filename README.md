@@ -8,6 +8,7 @@ The Server List test project is designed to showcase and test various functional
 - [Composable usage]: Composables as global state.
 - [Typescript]: Functions and variables are basically types.
 - [Configuration]: Typescript & vite & tailwind confiugration for vue 3
+- [Testing]: Testing all features with Cypress
 
 **Purpose:**
 - Provide a hands-on experience for users to interact with and evaluate the project.
