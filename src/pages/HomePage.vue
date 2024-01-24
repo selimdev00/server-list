@@ -10,7 +10,7 @@ generateRandomServers(5);
 
 <template>
   <div class="container min-h-screen flex items-center">
-    <div class="w-full grid grid-cols-2 gap-4">
+    <div class="w-full grid gap-4 sm:grid-cols-2">
       <ServerList />
 
       <ServerEditor />
