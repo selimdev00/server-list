@@ -15,6 +15,12 @@ const props = withDefaults(defineProps<FormInputProps>(), {
   required: false,
   disabled: false,
 });
+
+const emit = defineEmits(["update:modelValue"]);
+
+const updateValue = (event: Event) => {
+  emit("update:modelValue", (event.target as HTMLInputElement).value);
+};
 </script>
 
 <template>
@@ -31,7 +37,7 @@ const props = withDefaults(defineProps<FormInputProps>(), {
       :placeholder="props.placeholder"
       :required="props.required"
       :disabled="props.disabled"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="updateValue"
     />
   </div>
 </template>

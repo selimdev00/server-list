@@ -14,6 +14,12 @@ const props = withDefaults(defineProps<FormSelectProps>(), {
   required: false,
   disabled: false,
 });
+
+const emit = defineEmits(["update:modelValue"]);
+
+const updateValue = (event: Event) => {
+  emit("update:modelValue", (event.target as HTMLInputElement).value);
+};
 </script>
 
 <template>
@@ -29,7 +35,7 @@ const props = withDefaults(defineProps<FormSelectProps>(), {
       :placeholder="props.placeholder"
       :required="props.required"
       :disabled="props.disabled"
-      @change="$emit('update:modelValue', $event.target.value)"
+      @change="updateValue"
     >
       <option v-for="option in props.options" :key="option" :value="option">
         {{ option }}

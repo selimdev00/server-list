@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ServerList from "@/components/Server/ServerList.vue";
 import ServerEditor from "@/components/Server/ServerEditor.vue";
-import { ServerItem, ServerType } from "@/types/ServerTypes.ts";
 
 import { useServerList } from "@/composables/useServerList.ts";
 
