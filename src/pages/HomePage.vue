@@ -1,9 +1,6 @@
-<template>
-  <ServerList :servers="servers" />
-</template>
-
 <script setup lang="ts">
 import ServerList from "@/components/Server/ServerList.vue";
+import ServerEditor from "@/components/Server/ServerEditor.vue";
 import { ServerItem, ServerType } from "@/types/ServerTypes.ts";
 
 function generateRandomServers(count): ServerItem[] {
@@ -25,3 +22,13 @@ function generateRandomServers(count): ServerItem[] {
 
 const servers: ServerItem[] = generateRandomServers(5);
 </script>
+
+<template>
+  <div class="container min-h-screen flex items-center">
+    <div class="w-full grid grid-cols-2 gap-4">
+      <ServerList :servers="servers" />
+
+      <ServerEditor />
+    </div>
+  </div>
+</template>
