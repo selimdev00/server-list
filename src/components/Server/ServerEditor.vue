@@ -23,6 +23,7 @@ const { selectedServer, saveSelectedServer, deleteSelectedServer } =
         v-else
         class="flex flex-col justify-between h-full gap-4"
         @submit.prevent="saveSelectedServer"
+        data-server-editor
       >
         <div class="flex flex-col gap-3">
           <FormInput
@@ -54,6 +55,7 @@ const { selectedServer, saveSelectedServer, deleteSelectedServer } =
           </button>
 
           <button
+            id="delete"
             class="border-0 bg-red-500 px-2 py-1 rounded text-white w-full"
             @click="deleteSelectedServer"
           >
@@ -61,6 +63,7 @@ const { selectedServer, saveSelectedServer, deleteSelectedServer } =
           </button>
 
           <button
+            id="cancel"
             class="border-0 bg-gray-500 px-2 py-1 rounded text-white w-full"
             @click="selectedServer = null"
           >

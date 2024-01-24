@@ -27,7 +27,7 @@ const { servers, setSelectedServer, selectedServer, generateRandomServers } =
       </div>
     </div>
 
-    <ul v-if="servers.length" class="flex flex-col">
+    <ul v-if="servers.length" class="flex flex-col" data-server-list>
       <li
         v-for="server in servers"
         :key="server.customer_id"
@@ -37,6 +37,7 @@ const { servers, setSelectedServer, selectedServer, generateRandomServers } =
           'bg-gray-50 border-sky-300 text-sky-500':
             server.id === selectedServer?.id,
         }"
+        :data-server-list-item="server.id"
       >
         <div>
           <span class="text-xs text-gray-500">{{ server.customer_id }}</span>
